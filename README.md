@@ -1,5 +1,31 @@
 # Waterline Labs
 
+> **Nota de producto:** este repositorio ahora también incluye **CargoProof**, un MVP web independiente para organizar evidencia de cargas. Su objetivo es servir a transportistas, exportadores, operadores e inspectores con expedientes, eventos e informes compartibles. La plataforma usa datos de demostración persistentes en el navegador; no procesa pagos, seguros ni activos reales.
+
+## CargoProof MVP
+
+CargoProof es una aplicación web lista para demostraciones comerciales que permite:
+
+- Crear expedientes de carga con origen, destino y tipo de mercadería.
+- Registrar hitos, documentación e incidencias en una línea de tiempo.
+- Adjuntar un archivo al evento y registrar su nombre en la evidencia del expediente.
+- Consultar estados, confirmar entregas y generar comprobantes de integridad de demostración.
+- Compartir un acceso de solo lectura simulado y copiar su enlace.
+- Descargar un informe HTML imprimible del expediente.
+
+### Ejecutar localmente
+
+```bash
+npm install
+npm run dev
+```
+
+Para crear una versión de producción, ejecutá `npm run build`. Para revisar el estilo de código, ejecutá `npm run format:check`; para el análisis estático, `npm run lint`. Vercel detecta el proyecto Vite automáticamente: importá el repositorio desde GitHub y conservá los comandos predeterminados de instalación y build. El archivo `vercel.json` incorpora encabezados HTTP básicos de seguridad.
+
+### Alcance del MVP
+
+Los datos se guardan en el almacenamiento local del navegador para facilitar una demo sin cuentas ni servidor. El adjunto queda registrado como evento, pero no se sube a almacenamiento remoto en esta versión. Antes de ofrecer CargoProof para operaciones reales se requiere una API autenticada, almacenamiento cifrado de archivos, permisos por organización, retención de datos y revisión legal/comercial.
+
 Waterline Labs is an omnichain commodities trade operating system for Argentina, focused on Web3 real-world assets (RWA), AI-assisted operations, and tokenization workflows for agriculture, lithium, and energy markets.
 
 > **Goal:** provide a production-ready blueprint for moving from commodity origination to settlement with strong controls, auditability, and operational resilience.
